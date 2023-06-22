@@ -18,13 +18,19 @@ let { userName, age, country } = person;
 console.log(userName, age, country);
 console.log(person.userName, age, country);
 
-// Spread Operator
+/* 
+  * Spread Operator
+  ? El operador de propagación (spread operator), como su nombre lo dice, consiste en propagar los elementos de un iterable, ya sea un array o string utilizando tres puntos (...) dentro de un array.
+*/
 let person2 = { name: "Rene", age: 25 };
 let city = "Hernandarias";
-let data = { ...person2, city };e
+let data = { ...person2, city };
 console.log(data);
 
-// Rest
+/* 
+  * REST
+  ? El parámetro rest consiste en agrupar el residuo de elementos mediante la sintaxis de tres puntos (...) seguido de una variable que contendrá los elementos en un array.
+*/
 function sum(num, ...values) {
   console.log(values);
   console.log(num + values[0]);
@@ -46,3 +52,4 @@ const [cero, ...positivos] = array;
 usuario; // { nombre: 'Andres', age: 23 }
 positivos; // [ 1, 2, 3, 4, 5 ]
 console.log(positivos);
+console.log(usuario);
