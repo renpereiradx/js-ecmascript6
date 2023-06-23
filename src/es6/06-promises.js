@@ -29,21 +29,20 @@ const rejectFn = () => {
 
 promise(true)
   .then((response) => {
-    console.log("primera promesa")
-  })
-  .then((response) => {
     console.log(response);
+  })
+  .then(() => {
+    console.log("segunda promesa");
   })
   .catch((err) => {
     console.log(err);
-    console.log('error catch');
+    console.log("error catch");
   });
 
-promise(false)
-  .then(fulFillFn, rejectFn)
-  //.catch((err) => {
-    //console.log(err);
-  //});
+promise(false).then(fulFillFn, rejectFn);
+//.catch((err) => {
+//console.log(err);
+//});
 /* 
 La clase Promise y sus métodos then y catch fueron añadidos en ES6. Esto resuelve un problema del manejo del asincronismo con callbacks, llamado Callback Hell.
 .then() y .catch() son metodos de la clase Promise que retorna a traves de la funcion promise.
