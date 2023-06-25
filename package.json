@@ -11,5 +11,6 @@
     "javascript"
   ],
   "author": "renpereiradx <renedx92@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "type": "module"
 }
